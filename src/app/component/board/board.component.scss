@@ -1,0 +1,104 @@
+div.no-robot {
+  width: 50px;
+  height: 50px;
+  background: #666;
+}
+
+div.has-robot {
+  width: 50px;
+  height: 50px;
+  background: red;
+}
+
+#roboto {
+  width: 20%;
+  height: 20%;
+  border-radius: 100%;
+  position: absolute;
+  display: none;
+}
+
+#reportLog {
+  text-align: center;
+}
+
+#board-view {
+  width: 500px;
+  height: 500px;
+  position: block;
+  background-image: -moz-linear-gradient(
+      45deg,
+      #74aba5  25%,
+      transparent 26%,
+      transparent 75%,
+      #74aba5  75%,
+      #268c82 100%
+    ),
+    -moz-linear-gradient(45deg, #74aba5  25%, transparent 26%, transparent 75%, #74aba5
+          75%, #268c82 100%);
+  background-image: -webkit-linear-gradient(
+      45deg,
+      #268c82 25%,
+      transparent 26%,
+      transparent 75%,
+      #268c82 75%,
+      #268c82 100%
+    ),
+    -webkit-linear-gradient(45deg, #74aba5 25%, transparent 26%, transparent 75%, #74aba5
+          75%, #268c82 100%);
+  -moz-background-size: 200px 200px;
+  background-size: 200px 200px;
+  -webkit-background-size: 200px 200px;
+  background-position: 0 0, 100px 100px;
+  border: 1px solid #268c82;
+  border-radius: 4px;
+  transform: rotateX(36deg) rotateY(0deg) rotateZ(-45deg);
+  transform-style: preserve-3d;
+
+  margin: 0px auto;
+}
+
+.North {
+  background: url("/assets/n.svg") no-repeat left top;
+  transform: rotateX(-36deg) rotateY(0deg) rotateZ(24.5deg)
+    translate3d(-8px, -15px, 30px);
+  transform-style: preserve-3d;
+}
+
+.South {
+  background: url("/assets/s.svg") no-repeat left top;
+  transform: rotateX(-36deg) rotateY(0deg) rotateZ(24.5deg)
+    translate3d(-8px, -15px, 30px);
+  transform-style: preserve-3d;
+}
+
+.East {
+  background: url("/assets/e.svg") no-repeat left top;
+  transform: rotateX(-36deg) rotateY(0deg) rotateZ(24.5deg)
+    translate3d(-8px, -15px, 30px);
+  transform-style: preserve-3d;
+}
+.West {
+  background: url("/assets/w.svg") no-repeat left top;
+  transform: rotateX(-36deg) rotateY(0deg) rotateZ(24.5deg)
+    translate3d(-8px, -15px, 30px);
+  transform-style: preserve-3d;
+}
+
+.edge {
+  animation-name: color;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes color {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: red;
+  }
+  100% {
+    background-color: transparent;
+  }
+}

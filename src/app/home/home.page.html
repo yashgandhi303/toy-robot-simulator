@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Toy Robot Simulator
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Toy Robot Simulator</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <!-- <app-board-view></app-board-view> -->
+    <div class="place-table">
+      <app-board
+        [command]="command"
+        (commandExecuted)="onCommandReceived($event)"
+      ></app-board>
+    </div>
+    <div class="ion-padding-top">
+      <app-command (commandReceived)="onCommandReceived($event)"></app-command>
+    </div>
+
+    <div id="output-container">
+      <div>
+        <output>
+          {{uilog}}
+        </output>
+      </div>
+    </div>
+
+    <div>
+      <app-manual></app-manual>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,51 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: calc(var(--ion-safe-area-top) + 58px);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+#output-container {
+  background-color: black;
+  background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+  width: 80%;
+  height: 100px;
+  margin: 0;
+  overflow: hidden;
+
+  color: white;
+  font: 1.3rem Inconsolata, monospace;
+  text-shadow: 0 0 5px #c8c8c8;
+  display: block;
+
+  output {
+    margin: 15px 15px 0px 15px;
+    display: block;
+    text-align: center;
+  }
+}
+::selection {
+  background: #0080ff;
+  text-shadow: none;
+}
+pre {
+  margin: 0;
+}

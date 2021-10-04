@@ -1,0 +1,15 @@
+<table style="display: none;">
+  <tr *ngFor="let r of rows">
+    <td *ngFor="let c of cols">
+      <div class="{{ classMap(r, c) }}"></div>
+    </td>
+  </tr>
+</table>
+
+<div id="board-view">
+  <div
+    id="roboto"
+    class="{{ directionClass }}"
+    [ngStyle]="XYDirectionStyle"
+  ></div>
+</div>
